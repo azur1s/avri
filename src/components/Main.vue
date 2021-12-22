@@ -12,7 +12,7 @@ const count = ref(0)
 
   <p class="text">There is nothing yet sadly</p>
 
-  <p class="copyright">© Azur 2077</p>
+  <p class="copyright">© Natapat Samutpong 2077</p>
 
 </template>
 
