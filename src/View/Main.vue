@@ -1,8 +1,11 @@
 <script setup lang="ts">
+// @ts-ignore
+import Main from '../components/Main.vue'
 </script>
 
 <template>
-    <router-view></router-view>
+    <img alt="Gif" src="../assets/wafuwafu.gif"/>
+    <Main msg="Welcome"/>
 </template>
 
 <style>
@@ -14,6 +17,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
+    margin-top: 60px;
 }
 
 body {
