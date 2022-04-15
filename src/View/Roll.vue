@@ -8,7 +8,7 @@
             position: absolute;
             top: 0;
             left: 0;"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&origin=http://azur.moe"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&&cc_load_policy=1&origin=http://azur.moe"
         allow="autoplay"
     />
 </template>
