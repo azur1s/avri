@@ -13,6 +13,12 @@ const routes = [
         // @ts-ignore
         beforeEnter: (to, from, next) => { window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1"; }
     },
+    {
+        path: "/free_robux",
+        component: Roll,
+        // @ts-ignore
+        beforeEnter: (to, from, next) => { window.location.href = "https://www.youtube.com/watch?v=Z0iUK2PCllE"; }
+    }
 ]
 
 const router = createRouter({
