@@ -10,7 +10,6 @@
         <div class="flex-1 gap-x-2rem inline-flex justify-end">
             <NavLink to={'/'}>/home</NavLink>
             <NavLink to={'/about'}>/about</NavLink>
-            <NavLink to={'/blog'}>/blog</NavLink>
         </div>
     </nav>
 
