@@ -8,7 +8,7 @@
 </script>
 
 <a
-    class='text-gray-500 hover:text-light-900 no-underline tr'
+    class='text-gray-500 hover:text-light-900 no-underline transition-colors duration-200'
     class:text-sky-500={act}
     class:hover:text-sky-200={act}
     href={to}
