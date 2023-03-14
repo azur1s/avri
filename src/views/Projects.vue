@@ -1,20 +1,11 @@
 <script setup lang="ts">
 import Title from '../components/Title.vue';
 
-enum Tag {
-    Language = "Language",
-    Compiler = "Compiler",
-    Interpreter = "Interpreter",
-    Rust = "Rust",
-    Haskell = "Haskell",
-}
-
 type Project = {
     title: string;
     description: string;
     icon: any;
     link: string;
-    tags: Tag[];
 };
 
 let projects: Project[] = [
@@ -23,14 +14,12 @@ let projects: Project[] = [
         description: "A programming language.",
         icon: IconCarbonConditionPoint,
         link: "azur1s/holymer",
-        tags: [Tag.Language, Tag.Compiler, Tag.Rust],
     },
     {
         title: "Atacamite",
         description: "An interpreted stack-based programming language.",
         icon: IconCarbonArrowDownRight,
         link: "azur1s/atacamite",
-        tags: [Tag.Language, Tag.Interpreter, Tag.Haskell],
     },
 ];
 
@@ -80,13 +69,6 @@ const filteredProjects = computed(() => {
                 </div>
                 <div class="flex-auto">
                     <div class="text-lg">{{ project.title }}</div>
-                    <div class="pr-1rem flex flex-row gap-1rem">
-                            <div
-                                v-for="tag, index in project.tags"
-                                :key="index"
-                                class="text-md text-mode-300 self-center"
-                            >{{ tag }}</div>
-                        </div>
                     <div class="text-mode-500 text-md">{{ project.description }}</div>
                 </div>
             </a>
