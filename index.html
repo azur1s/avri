@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Fragment+Mono&display=swap" as="style">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fragment+Mono&display=swap">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Azur</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts"></script>
+        <script>
+            // Flash Of Unstyled Content prevention
+            if (typeof window !== undefined) {
+                link = document.createElement("link");
+                link.type = "text/css";
+                link.rel = "stylesheet";
+                link.media = "screen,print";
+                link.href = `/themes/${localStorage.getItem("theme") || "dark"}.css`;
+                link.id = "theme";
+                document.getElementsByTagName("head")[0].appendChild(link);
+            }
+        </script>
+    </body>
+</html>

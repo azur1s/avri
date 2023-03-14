@@ -1,30 +1,36 @@
 {
-	"name": "azur.moe",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --plugin-search-dir . --check .",
-		"format": "prettier --plugin-search-dir . --write ."
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-cloudflare": "^2.2.0",
-		"@sveltejs/kit": "^1.5.0",
-		"@types/node": "^18.15.0",
-		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.8.1",
-		"svelte": "^3.54.0",
-		"svelte-check": "^3.0.1",
-		"svelte-windicss-preprocess": "^4.2.8",
-		"tslib": "^2.4.1",
-		"typescript": "^4.9.3",
-		"vite": "^4.0.0",
-		"vite-plugin-windicss": "^1.8.10",
-		"windicss": "^3.5.6"
-	},
-	"type": "module"
+    "name": "azur.moe",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vue-tsc && vite build",
+        "preview": "vite preview",
+        "format": "prettier . --write"
+    },
+    "dependencies": {
+        "@vueuse/core": "^9.13.0",
+        "nprogress": "^0.2.0",
+        "simplex-noise": "^4.0.1",
+        "vue": "^3.2.45"
+    },
+    "devDependencies": {
+        "@iconify-json/carbon": "^1.1.16",
+        "@iconify-json/mdi": "^1.1.50",
+        "@types/nprogress": "^0.2.0",
+        "@vitejs/plugin-vue": "^4.0.0",
+        "@vueuse/head": "^1.1.19",
+        "prettier": "^2.8.4",
+        "typescript": "^4.9.3",
+        "unplugin-auto-import": "^0.15.1",
+        "unplugin-icons": "^0.15.3",
+        "unplugin-vue-components": "^0.24.1",
+        "vite": "^4.1.0",
+        "vite-plugin-windicss": "^1.8.10",
+        "vite-ssg": "^0.22.1",
+        "vue-router": "^4.1.6",
+        "vue-tsc": "^1.0.24",
+        "windicss": "^3.5.6"
+    }
 }
