@@ -52,6 +52,16 @@ watch(theme, () => setTheme(theme.value));
                     class="text-mode-900 hover:text-primary text-xl tr flex"
                 />
             </a>
+            <a
+                href="https://open.spotify.com/artist/3JY01LBY8SIzk8Wto2JvOq"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="self-center items-center"
+            >
+                <i-mdi-spotify
+                    class="text-mode-900 hover:text-primary text-xl tr flex"
+                />
+            </a>
             <!-- Mode Toggle -->
             <button
                 class="text-mode-900 hover:text-primary text-xl tr flex"
