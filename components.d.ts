@@ -31,6 +31,7 @@ declare module '@vue/runtime-core' {
     IMdiSoundcloud: typeof import('~icons/mdi/soundcloud')['default']
     IMdiSpinner: typeof import('~icons/mdi/spinner')['default']
     IMdiSpotify: typeof import('~icons/mdi/spotify')['default']
+    IMdiYoutube: typeof import('~icons/mdi/youtube')['default']
     'IMi:moon': typeof import('~icons/mi/moon')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
     Project: typeof import('./src/components/Project.vue')['default']

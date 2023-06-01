@@ -43,22 +43,22 @@ watch(theme, () => setTheme(theme.value));
                 />
             </a>
             <a
+                href="https://youtube.come/@azur1s"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="self-center items-center"
+            >
+                <i-mdi-youtube
+                    class="text-mode-900 hover:text-primary text-xl tr flex"
+                />
+            </a>
+            <a
                 href="https://soundcloud.com/azur1s"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="self-center items-center"
             >
                 <i-mdi-soundcloud
-                    class="text-mode-900 hover:text-primary text-xl tr flex"
-                />
-            </a>
-            <a
-                href="https://open.spotify.com/artist/3JY01LBY8SIzk8Wto2JvOq"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="self-center items-center"
-            >
-                <i-mdi-spotify
                     class="text-mode-900 hover:text-primary text-xl tr flex"
                 />
             </a>
