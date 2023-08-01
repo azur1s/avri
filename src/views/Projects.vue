@@ -10,16 +10,16 @@ type Project = {
 
 let projects: Project[] = [
     {
-        title: "Holymer",
-        description: "A programming language.",
-        icon: IconCarbonConditionPoint,
-        link: "azur1s/holymer",
+        title: "Penare",
+        description: "A wonky digital distortion plugin (VST3/CLAP)",
+        icon: IconCarbonMusic,
+        link: "azur1s/penare",
     },
     {
-        title: "Atacamite",
-        description: "An interpreted stack-based programming language.",
-        icon: IconCarbonArrowDownRight,
-        link: "azur1s/atacamite",
+        title: "Holymer",
+        description: "A programming language",
+        icon: IconCarbonConditionPoint,
+        link: "azur1s/holymer",
     },
 ];
 
