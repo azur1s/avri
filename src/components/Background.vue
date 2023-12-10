@@ -10,7 +10,7 @@
 <template>
     <img
         class="zindex absolute w-full h-full top-0 left-50 object-cover"
-        src="images/girl.png"
+        src="/images/girl.png"
         alt="Background"
     />
 </template>
