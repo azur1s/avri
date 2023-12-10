@@ -5,7 +5,6 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const IconCarbonArrowDownRight: typeof import('~icons/carbon/arrow-down-right')['default']
   const IconCarbonConditionPoint: typeof import('~icons/carbon/condition-point')['default']
   const IconCarbonMusic: typeof import('~icons/carbon/music')['default']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']

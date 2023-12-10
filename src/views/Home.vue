@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import Title from '../components/Title.vue';
 </script>
 
+<style scoped lang="postcss">
+</style>
+
 <template>
-    <div>
-        <Title>Hello!</Title>
-        <p class="pt-1rem tr text-md text-mode-500">
-            soon
-        </p>
-    </div>
+    <Title>
+        real
+    </Title>
 </template>

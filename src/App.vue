@@ -1,39 +1,45 @@
 <script setup lang="ts">
 import Background from "./components/Background.vue";
 import NavBar from "./components/NavBar.vue";
-import Footer from "./components/Footer.vue";
 </script>
 
 <template>
     <Background />
     <div class="flex flex-col h-screen tr">
         <NavBar />
-        <div
-            class="
-                px-2rem py-1.5rem mx-auto
-                max-w-76.79ch md:min-w-76.79ch <md:min-w-full
-                self-center scroll
-            "
-        >
-            <RouterView />
-            <Footer />
+        <div class="scroll flex-1 p-2rem pl-10.5rem w-50vw">
+            <RouterView/>
         </div>
     </div>
 </template>
 
 <style lang="postcss">
-/* fragment-mono-regular - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Fragment Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/fragment-mono-v1-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-       url('../fonts/fragment-mono-v1-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/PPNeueMontreal-Regular.woff2') format('woff2'),
+         url('./assets/fonts/PPNeueMontreal-Regular.woff')  format('woff');
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/PPNeueMontreal-Medium.woff2') format('woff2'),
+         url('./assets/fonts/PPNeueMontreal-Medium.woff')  format('woff');
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/PPNeueMontreal-Bold.woff2') format('woff2'),
+         url('./assets/fonts/PPNeueMontreal-Bold.woff')  format('woff');
 }
 
 * {
-    font-family: "Fragment Mono", monospace;
+    font-family: 'Neue Montreal', sans-serif;
 }
 
 html {
@@ -43,6 +49,7 @@ html {
 body {
     width: 100vw;
     overflow-x: hidden;
+    @apply bg-mode-50;
 }
 #nprogress {
     pointer-events: none;
@@ -78,5 +85,8 @@ body {
 /* Aliases */
 .tr {
     @apply transition-all duration-150;
+}
+.link {
+    @apply text-mode-900 hover:text-primary text-md font-medium items-center
 }
 </style>

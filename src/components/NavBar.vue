@@ -1,75 +1,41 @@
 <script setup lang="ts">
 import { setTheme } from "../theme";
+import Dropdown from "./Dropdown.vue";
+import Link from "./Link.vue";
 
+const route = useRoute();
 const theme = useLocalStorage("theme", "dark");
 watch(theme, () => setTheme(theme.value));
 </script>
 
-<style scoped lang="postcss">
-.route {
-    @apply text-mode-900 hover:text-primary text-md font-medium items-center
-}
-</style>
-
 <template>
     <nav
         class="
-            px-2rem py-1.5rem flex flex-row justify-between
+            px-2rem py-1.5rem flex flex-row items-center gap-x-2rem text-l
         "
     >
-        <div class="justify-start">
-            <RouterLink class="route tr text-xl" to="/">
-                A
-            </RouterLink>
-        </div>
-        <div class="justify-end inline-flex gap-x-2rem items-center">
-            <!-- Routes -->
-            <RouterLink class="route tr" to="/" >
-                <div class="<md:hidden">Home</div>
-            </RouterLink>
-            <RouterLink class="route tr" to="/projects" >
-                <div class="<md:hidden">Projects</div>
-                <i-mdi-folder-open class="md:hidden flex text-lg" />
-            </RouterLink>
-            <!-- Socials -->
-            <a
-                href="https://github.com/azur1s"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="self-center items-center"
-            >
-                <i-mdi-github-face
-                    class="text-mode-900 hover:text-primary text-xl tr flex"
-                />
-            </a>
-            <a
-                href="https://youtube.come/@azur1s"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="self-center items-center"
-            >
-                <i-mdi-youtube
-                    class="text-mode-900 hover:text-primary text-xl tr flex"
-                />
-            </a>
-            <a
-                href="https://soundcloud.com/azur1s"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="self-center items-center"
-            >
-                <i-mdi-soundcloud
-                    class="text-mode-900 hover:text-primary text-xl tr flex"
-                />
-            </a>
-            <!-- Mode Toggle -->
-            <button
-                class="text-mode-900 hover:text-primary text-xl tr flex"
-                @click="theme = theme === 'dark' ? 'light' : 'dark'"
-            >
-                <i-mdi-moon-waning-crescent v-if="theme === 'light'" />
-                <i-mdi-lightbulb-on v-if="theme === 'dark'" />
-            </button>
-        </div>
+        <RouterLink class="link tr pr-4rem" to="/">
+            AZUR
+        </RouterLink>
+
+        <RouterLink class="link tr" to="/releases">
+            RELEASES
+        </RouterLink>
+
+        <Dropdown title="LINKS">
+            <p class="tr text-mode-900">MUSIC</p>
+            <Link to="https://youtube.com/@azur1s">YOUTUBE</Link>
+            <Link to="https://open.spotify.com/artist/1LtCIFOZ7dh57qLWCFGtUm">SPOTIFY</Link>
+            <Link to="https://soundcloud.com/azur1s">SOUNDCLOUD</Link>
+            <p class="tr text-mode-900">CODE</p>
+            <Link to="https://github.com/azur1s">GITHUB</Link>
+        </Dropdown>
+
+        <button
+            class="link tr flex"
+            @click="theme = theme === 'dark' ? 'light' : 'dark'"
+        >
+            SWITCH
+        </button>
     </nav>
 </template>

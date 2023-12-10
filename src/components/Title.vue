@@ -1,11 +1,9 @@
 <template>
     <p
         class="
-            tr
-            text-3xl font-bold
-            text-transparent bg-clip-text
-            bg-gradient-to-br from-primary to-secondary
-            w-min
+            tr text-5xl font-500 text-mode-900
+            flex flex-row items-center gap-x-1rem
+            overflow-visible pb-1rem
         "
     ><slot /></p>
 </template>

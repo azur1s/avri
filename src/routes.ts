@@ -1,5 +1,5 @@
 import Home from "./views/Home.vue";
-import Projects from "./views/Projects.vue";
+import Releases from "./views/Releases.vue";
 
 const routes = [
     {
@@ -8,9 +8,9 @@ const routes = [
         component: Home,
     },
     {
-        path: "/projects",
-        name: "Projects",
-        component: Projects,
+        path: "/releases",
+        name: "Releases",
+        component: Releases,
     },
 ]
 
