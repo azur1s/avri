@@ -1,36 +1,46 @@
 {
-    "name": "azur.moe",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vue-tsc && vite build",
-        "preview": "vite preview",
-        "format": "prettier . --write"
-    },
-    "dependencies": {
-        "@vueuse/core": "^9.13.0",
-        "nprogress": "^0.2.0",
-        "simplex-noise": "^4.0.1",
-        "vue": "^3.2.45"
-    },
-    "devDependencies": {
-        "@iconify-json/carbon": "^1.1.16",
-        "@iconify-json/mdi": "^1.1.50",
-        "@types/nprogress": "^0.2.0",
-        "@vitejs/plugin-vue": "^4.0.0",
-        "@vueuse/head": "^1.1.19",
-        "prettier": "^2.8.4",
-        "typescript": "^4.9.3",
-        "unplugin-auto-import": "^0.15.1",
-        "unplugin-icons": "^0.15.3",
-        "unplugin-vue-components": "^0.24.1",
-        "vite": "^4.1.0",
-        "vite-plugin-windicss": "^1.8.10",
-        "vite-ssg": "^0.22.1",
-        "vue-router": "^4.1.6",
-        "vue-tsc": "^1.0.24",
-        "windicss": "^3.5.6"
-    }
+  "name": "azur.moe",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "@radix-ui/react-aspect-ratio": "^1.0.3",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-menubar": "^1.0.4",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "embla-carousel-autoplay": "^8.0.0-rc17",
+    "embla-carousel-react": "^8.0.0-rc17",
+    "lucide-react": "^0.303.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
 }
