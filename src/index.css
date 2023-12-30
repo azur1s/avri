@@ -57,6 +57,15 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1 {
+    @apply text-4xl font-extrabold tracking-tight
+  }
+  h2 {
+    @apply text-3xl font-semibold tracking-tight
+  }
+  h3 {
+    @apply text-2xl font-semibold tracking-tight
+  }
 }
 
 @font-face {

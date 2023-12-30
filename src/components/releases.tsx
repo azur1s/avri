@@ -4,6 +4,7 @@ import Autoplay from "embla-carousel-autoplay"
 import Image from "@/components/image"
 
 import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -102,20 +103,15 @@ export default function Releases() {
                     <CardContent>
                       <p>short desc</p>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sapiente saepe ab quisquam exercitationem obcaecati, tenetur dolores enim impedit perspiciatis assumenda quibusdam amet, nobis laboriosam?</p>
+                      <p className="text-xl font-semibold my-2">Downloads</p>
+                      <div className="flex flex-row gap-4">
+                        <Button>Music</Button>
+                        <Button>Artwork</Button>
+                      </div>
                     </CardContent>
                   </Card>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
-                  <AlertDialogCancel
-                    onClick={() => {
-                      alert("mp3")
-                    }}
-                  >.mp3</AlertDialogCancel>
-                  <AlertDialogCancel
-                    onClick={() => {
-                      alert("png")
-                    }}
-                  >.png</AlertDialogCancel>
                   <AlertDialogAction>OK</AlertDialogAction>
                 </AlertDialogFooter>
               </AlertDialogContent>
