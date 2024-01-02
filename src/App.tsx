@@ -9,27 +9,65 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import IconYoutube from "~icons/carbon/logo-youtube"
+import IconSpotify from "~icons/mdi/spotify"
+import IconSoundcloud from "~icons/mdi/soundcloud"
+import IconArtStation from "~icons/mdi/artstation"
+import IconGithub from "~icons/carbon/logo-github"
+
 function App() {
+  let age = Math.abs(new Date(Date.now() - new Date("2007-09-04").getTime()).getUTCFullYear() - 1970)
+
   return (
     <>
       <main className="p-4 py-16 mx-auto w-full max-w-3xl">
         {/* About */}
-        <div className="flex flex-col-reverse sm:flex-row gap-4 items-center">
-          <div className="flex-shrink">
+        <div className="flex flex-col-reverse sm:flex-row gap-8 items-center">
+          <div className="flex-grow">
             <h1 className="text-foreground">Hello!</h1>
             <p className="text-foreground">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quis veritatis vel error ullam ea eveniet tenetur aliquam, quos optio harum iure. Repudiandae nihil soluta beatae pariatur dolores nobis vero dolore necessitatibus fugit libero numquam quis, adipisci dolorem fuga vitae provident quae maiores expedita nostrum dignissimos voluptas, cupiditate quos. Quos?
+              Musician, Artist and Programmer. I'm currently {age} years old and making stuff in my living room.
             </p>
           </div>
           <div className="flex-shrink-0 h-28 w-28">
             <Image src="icon.png" alt="Icon"/>
           </div>
         </div>
-        <div className="mt-2 flex flex-row gap-4">
-          <Button>buttons</Button>
-          <Button>buttons</Button>
-          <Button>buttons</Button>
+        <div className="mt-2 flex flex-row gap-2">
+          <a
+            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+            href="https://www.youtube.com/@azur1s"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><IconYoutube className="w-6 h-6"/></a>
+          <a
+            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+            href="https://open.spotify.com/artist/1LtCIFOZ7dh57qLWCFGtUm"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><IconSpotify className="w-6 h-6"/></a>
+          <a
+            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+            href="https://soundcloud.com/azur1s"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><IconSoundcloud className="w-6 h-6" /></a>
+          <a
+            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+            href="https://www.artstation.com/azur1s"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><IconArtStation className="w-6 h-6" /></a>
+          <a
+            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+            href="https://github.com/azur1s"
+            target="_blank"
+            rel="noopener noreferrer"
+          ><IconGithub className="w-6 h-6" /></a>
         </div>
+
+        <h3 className="mt-8">GUYS my web site not finish please do not look below</h3>
+        <p>just click the links lmao</p>
 
         <Separator className="my-8" />
 
