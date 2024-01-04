@@ -47,9 +47,7 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
-}
 
-@layer base {
   * {
     font-family: "Geist";
     @apply border-border;
@@ -58,13 +56,16 @@
     @apply bg-background text-foreground;
   }
   h1 {
-    @apply text-4xl font-extrabold tracking-tight
+    @apply text-2xl font-extrabold tracking-tight
   }
   h2 {
-    @apply text-3xl font-semibold tracking-tight
+    @apply text-xl font-semibold tracking-tight
   }
   h3 {
-    @apply text-2xl font-semibold tracking-tight
+    @apply text-lg font-semibold tracking-tight
+  }
+  p {
+    @apply text-muted-foreground
   }
 }
 

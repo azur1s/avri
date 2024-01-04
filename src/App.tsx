@@ -1,7 +1,8 @@
 import Releases from "@/components/releases"
+import Link from "@/components/link"
 import Image from "@/components/image"
 
-import { Button } from "@/components/ui/button"
+import { ThemeProvider } from "@/components/theme-provider"
 import { Separator } from "@/components/ui/separator"
 import {
   Accordion,
@@ -14,18 +15,19 @@ import IconSpotify from "~icons/mdi/spotify"
 import IconSoundcloud from "~icons/mdi/soundcloud"
 import IconArtStation from "~icons/mdi/artstation"
 import IconGithub from "~icons/carbon/logo-github"
+import IconEmail from "~icons/lucide/mail"
 
 function App() {
   let age = Math.abs(new Date(Date.now() - new Date("2007-09-04").getTime()).getUTCFullYear() - 1970)
 
   return (
-    <>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <main className="p-4 py-16 mx-auto w-full max-w-3xl">
         {/* About */}
         <div className="flex flex-col-reverse sm:flex-row gap-8 items-center">
           <div className="flex-grow">
-            <h1 className="text-foreground">Hello!</h1>
-            <p className="text-foreground">
+            <h1>Hello!</h1>
+            <p>
               Musician, Artist and Programmer. I'm currently {age} years old and making stuff in my living room.
             </p>
           </div>
@@ -33,70 +35,55 @@ function App() {
             <Image src="icon.png" alt="Icon"/>
           </div>
         </div>
-        <div className="mt-2 flex flex-row gap-2">
-          <a
-            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+        <div className="flex flex-row gap-2">
+          <Link
             href="https://www.youtube.com/@azur1s"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><IconYoutube className="w-6 h-6"/></a>
-          <a
-            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+          ><IconYoutube className="w-5 h-5 text-foreground/50"/></Link>
+          <Link
             href="https://open.spotify.com/artist/1LtCIFOZ7dh57qLWCFGtUm"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><IconSpotify className="w-6 h-6"/></a>
-          <a
-            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+          ><IconSpotify className="w-5 h-5 text-foreground/50"/></Link>
+          <Link
             href="https://soundcloud.com/azur1s"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><IconSoundcloud className="w-6 h-6" /></a>
-          <a
-            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+          ><IconSoundcloud className="w-5 h-5 text-foreground/50" /></Link>
+          <Link
             href="https://www.artstation.com/azur1s"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><IconArtStation className="w-6 h-6" /></a>
-          <a
-            className="text-primary-background border-2 border-foreground/25 p-2 rounded-md hover:bg-foreground/10 transition-colors duration-250"
+          ><IconArtStation className="w-5 h-5 text-foreground/50" /></Link>
+          <Link
             href="https://github.com/azur1s"
-            target="_blank"
-            rel="noopener noreferrer"
-          ><IconGithub className="w-6 h-6" /></a>
+          ><IconGithub className="w-5 h-5 text-foreground/50" /></Link>
+          <Link
+            href="mailto:contact@azur.moe"
+          ><IconEmail className="w-5 h-5 text-foreground/50"/></Link>
         </div>
-
-        <h3 className="mt-8">GUYS my web site not finish please do not look below</h3>
-        <p>just click the links lmao</p>
 
         <Separator className="my-8" />
 
         {/* Releases & Artworks */}
-        <h2 className="text-foreground">Releases & Artworks</h2>
-        <p className="pb-4">Click inside for more info!</p>
-        <Releases />
-        <Releases />
+        {/* <h2 className="text-foreground">Releases & Artworks</h2> */}
+        {/* <p className="pb-4">Click inside for more info!</p> */}
+        {/* <Releases /> */}
+        {/* <Releases /> */}
 
-        <Separator className="my-8" />
+        {/* <Separator className="my-8" /> */}
 
         {/* FAQs */}
         <h2 className="text-foreground">FAQs</h2>
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-xl">on god</AccordionTrigger>
+            <AccordionTrigger className="text-xl">is this finish</AccordionTrigger>
             <AccordionContent>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium explicabo impedit in nihil, cumque dolorum quod quisquam ab mollitia consequuntur voluptas odio temporibus optio sequi.
+              <p>no</p>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-xl">wait can i add image</AccordionTrigger>
+            <AccordionTrigger className="text-xl">r</AccordionTrigger>
             <AccordionContent>
               <img src="FIRE_IN_THE_HOLE.jpg" className="w-full" />
             </AccordionContent>
           </AccordionItem>
         </Accordion>
       </main>
-    </>
+    </ThemeProvider>
   )
 }
 
