@@ -1,3 +1,4 @@
+import Links from "@/components/links"
 import Releases from "@/components/releases"
 import Link from "@/components/link"
 import Image from "@/components/image"
@@ -21,6 +22,7 @@ import IconSpotify from "~icons/mdi/spotify"
 import IconSoundcloud from "~icons/mdi/soundcloud"
 import IconArtStation from "~icons/mdi/artstation"
 import IconGithub from "~icons/carbon/logo-github"
+import IconKofi from "~icons/simple-icons/kofi"
 import IconEmail from "~icons/lucide/mail"
 import IconCalendar from "~icons/lucide/calendar-heart"
 
@@ -51,25 +53,12 @@ function App() {
             <Image src="icon.png" alt="Icon"/>
           </div>
         </div>
-        <div className="flex flex-row gap-2">
-          <Link
-            href="https://www.youtube.com/@azur1s"
-          ><IconYoutube className="w-5 h-5 text-foreground/50"/></Link>
-          <Link
-            href="https://open.spotify.com/artist/1LtCIFOZ7dh57qLWCFGtUm"
-          ><IconSpotify className="w-5 h-5 text-foreground/50"/></Link>
-          <Link
-            href="https://soundcloud.com/azur1s"
-          ><IconSoundcloud className="w-5 h-5 text-foreground/50" /></Link>
-          <Link
-            href="https://www.artstation.com/azur1s"
-          ><IconArtStation className="w-5 h-5 text-foreground/50" /></Link>
-          <Link
-            href="https://github.com/azur1s"
-          ><IconGithub className="w-5 h-5 text-foreground/50" /></Link>
-          <Link
-            href="mailto:contact@azur.moe"
-          ><IconEmail className="w-5 h-5 text-foreground/50"/></Link>
+
+        <Separator className="my-8" />
+
+        <h2>Redirects</h2>
+        <div className="flex justify-center">
+          <Links />
         </div>
 
         <Separator className="my-8" />
@@ -77,7 +66,6 @@ function App() {
         {/* Releases & Artworks */}
         {/* <h2 className="text-foreground">Releases & Artworks</h2> */}
         {/* <p className="pb-4">Click inside for more info!</p> */}
-        {/* <Releases /> */}
         {/* <Releases /> */}
 
         {/* <Separator className="my-8" /> */}
