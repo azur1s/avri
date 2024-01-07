@@ -5,6 +5,12 @@ import Image from "@/components/image"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Separator } from "@/components/ui/separator"
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -16,6 +22,7 @@ import IconSoundcloud from "~icons/mdi/soundcloud"
 import IconArtStation from "~icons/mdi/artstation"
 import IconGithub from "~icons/carbon/logo-github"
 import IconEmail from "~icons/lucide/mail"
+import IconCalendar from "~icons/lucide/calendar-heart"
 
 function App() {
   let age = Math.abs(new Date(Date.now() - new Date("2007-09-04").getTime()).getUTCFullYear() - 1970)
@@ -28,7 +35,16 @@ function App() {
           <div className="flex-grow">
             <h1>Hello!</h1>
             <p>
-              Musician, Artist and Programmer. I'm currently {age} years old and making stuff in my living room.
+              Musician, Artist and Programmer. I'm currently
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="px-[0.5ch] underline hover:text-foreground transition">{age} years old</TooltipTrigger>
+                  <TooltipContent className="flex flex-row text-muted-foreground gap-2">
+                    <IconCalendar /><p>9 April, 2007</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              and making stuff in my living room.
             </p>
           </div>
           <div className="flex-shrink-0 h-28 w-28">
