@@ -27,7 +27,7 @@ import IconEmail from "~icons/lucide/mail"
 import IconCalendar from "~icons/lucide/calendar-heart"
 
 function App() {
-  let age = Math.abs(new Date(Date.now() - new Date("2007-09-04").getTime()).getUTCFullYear() - 1970)
+  let age = new Date().getFullYear() - 2007
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">

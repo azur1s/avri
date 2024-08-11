@@ -15,12 +15,13 @@ import {
 import IconMusic from "~icons/lucide/music"
 import IconArt from "~icons/lucide/drafting-compass"
 import IconCode from "~icons/lucide/code-2"
-import IconSupport from "~icons/lucide/heart-handshake"
 import IconYoutube from "~icons/carbon/logo-youtube"
 import IconSpotify from "~icons/mdi/spotify"
 import IconArtStation from "~icons/mdi/artstation"
 import IconKofi from "~icons/simple-icons/kofi"
 import IconEmail from "~icons/lucide/mail"
+import IconInstagram from "~icons/mdi/instagram"
+import IconSocial from "~icons/lucide/smile-plus"
 
 export default function Links() {
   return (
@@ -65,7 +66,7 @@ export default function Links() {
               >
                 <div className="flex flex-row gap-1">
                   <IconSpotify className="w-5 h-5 text-muted-foreground" />
-                  Stream my music on  Spotify.
+                  Stream my music on Spotify.
                 </div>
               </ListItem>
             </ul>
@@ -143,25 +144,45 @@ export default function Links() {
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="flex flex-row gap-1">
-            <IconSupport />
-            Contact & Support
+            <IconSocial />
+            Socials
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
+              <li className="row-span-4">
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      Say hi & support me!
+                      Say hi!
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Contact me via email or support me with Ko-fi.
+                      Talk to me on social media. I won't bite :)
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
+              <ListItem
+                href="https://discord.gg/Dyp3A8kCdc"
+                target="_blank" rel="noopener noreferrer"
+                title="Discord"
+              >
+                <div className="flex flex-row gap-1">
+                  <IconInstagram className="w-5 h-5 text-muted-foreground" />
+                  Come talk with us. :D
+                </div>
+              </ListItem>
+              <ListItem
+                href="https://www.instagram.com/azur1s"
+                target="_blank" rel="noopener noreferrer"
+                title="Instagram"
+              >
+                <div className="flex flex-row gap-1">
+                  <IconInstagram className="w-5 h-5 text-muted-foreground" />
+                  See what I am up to.
+                </div>
+              </ListItem>
               <ListItem
                 href="mailto:contact@azur.moe"
                 target="_blank" rel="noopener noreferrer"
@@ -169,7 +190,7 @@ export default function Links() {
               >
                 <div className="flex flex-row gap-1">
                   <IconEmail className="w-5 h-5 text-muted-foreground" />
-                  Contact me at via  email.
+                  Contact me at via email.
                 </div>
               </ListItem>
               <ListItem
