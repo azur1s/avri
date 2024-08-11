@@ -18,10 +18,11 @@ import IconCode from "~icons/lucide/code-2"
 import IconYoutube from "~icons/carbon/logo-youtube"
 import IconSpotify from "~icons/mdi/spotify"
 import IconArtStation from "~icons/mdi/artstation"
+import IconSocial from "~icons/lucide/smile-plus"
+import IconDiscord from "~icons/mdi/discord"
 import IconKofi from "~icons/simple-icons/kofi"
 import IconEmail from "~icons/lucide/mail"
 import IconInstagram from "~icons/mdi/instagram"
-import IconSocial from "~icons/lucide/smile-plus"
 
 export default function Links() {
   return (
@@ -169,7 +170,7 @@ export default function Links() {
                 title="Discord"
               >
                 <div className="flex flex-row gap-1">
-                  <IconInstagram className="w-5 h-5 text-muted-foreground" />
+                  <IconDiscord className="w-5 h-5 text-muted-foreground" />
                   Come talk with us. :D
                 </div>
               </ListItem>
