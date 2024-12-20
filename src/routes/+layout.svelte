@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+import { onMount } from "svelte";
 import "../app.css";
 
 const scrollToEl = (event: { target: EventTarget | null }) => {
