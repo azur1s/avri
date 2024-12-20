@@ -72,7 +72,7 @@ onMount(() => {
                 <a
                     class="
                         box flex-1 flex-col justify-end hover:flex-[1.25]
-                        imgbg bg-[url('images/latest.png')] group
+                        imgbg bg-[url('/images/latest.png')] group
                     "
                     href="#discography"
                     on:click|preventDefault={scrollToEl}
@@ -87,7 +87,7 @@ onMount(() => {
                 <a
                     class="
                         box flex-1 flex-col justify-end hover:flex-[1.25]
-                        imgbg bg-[url('images/wide2.jpg')] group
+                        imgbg bg-[url('/images/wide2.jpg')] group
                     "
                     href="#gallery"
                     on:click|preventDefault={scrollToEl}
@@ -104,7 +104,7 @@ onMount(() => {
             <a
                 class="
                     box flex-1 flex-col justify-end hover:flex-[1.25]
-                    imgbg bg-[url('images/wide.jpg')] group
+                    imgbg bg-[url('/images/wide.jpg')] group
                 "
                 href="#about"
                 on:click|preventDefault={scrollToEl}
