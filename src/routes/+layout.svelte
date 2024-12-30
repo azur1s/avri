@@ -227,10 +227,75 @@ onMount(() => {
             scrollToTop?.classList.add("opacity-0");
         }
     });
+
+    const trailer = document.getElementById("trailer");
+    const trailerIcon = document.getElementById("trailer-icon");
+    const icons = [
+        "",
+        // material-symbols-light:arrow-cool-down-rounded
+        "M11.998 20.92q-.16 0-.296-.057t-.267-.186l-5.427-5.421q-.14-.14-.15-.344t.13-.35q.146-.166.357-.156q.21.01.357.156l4.798 4.784V12.73q0-.213.144-.356t.357-.144t.356.144t.143.356v6.637l4.823-4.804q.136-.14.339-.14t.353.145q.137.134.137.341t-.14.348l-5.446 5.421q-.132.13-.27.187t-.298.055m.001-10.69q-.213 0-.356-.144T11.5 9.73v-2q0-.213.144-.357t.357-.143t.356.143t.143.357v2.019q0 .205-.144.343t-.357.138m0-5q-.213 0-.356-.144T11.5 4.73v-1q0-.213.144-.356t.357-.144t.356.144t.143.356v1.019q0 .205-.144.343t-.357.138",
+        // material-symbols-light:arrow-outward-rounded
+        "m16.289 7.208l-9.766 9.746q-.14.14-.344.13q-.204-.009-.345-.15t-.14-.334t.14-.334L15.582 6.5H6.789q-.213 0-.357-.144t-.143-.357t.143-.356t.357-.143h9.692q.343 0 .575.232t.233.576V16q0 .213-.145.356t-.356.144t-.356-.144t-.144-.356z",
+    ];
+
+    window.addEventListener("mousemove", (event) => {
+        if (event.target instanceof HTMLElement) {
+            if (!trailer || !trailerIcon) return;
+
+            const interactable = event.target.closest(".interactable");
+            const interacting = interactable !== null;
+
+            const x = event.clientX - trailer.offsetWidth / 2;
+            const y = event.clientY - trailer.offsetHeight / 2;
+
+            const kf = {
+                transform: `
+                    translate(${x}px, ${y}px)
+                    scale(${interacting ? 4 : 1})
+                `,
+            }
+
+            trailer.animate(kf, {
+                duration: 800,
+                fill: "forwards",
+            });
+
+            if (interacting) {
+                const type = interactable!.getAttribute("data-type");
+                if (type === "down") {
+                    trailerIcon.setAttribute("d", icons[1]);
+                } else if (type === "external") {
+                    trailerIcon.setAttribute("d", icons[2]);
+                } else {
+                    trailerIcon.setAttribute("d", icons[0]);
+                }
+            } else {
+                trailerIcon.setAttribute("d", icons[0]);
+            }
+        }
+    });
 });
 </script>
 
 <main id="root" class="flex flex-col">
+    <!-- Mouse trailer -->
+    <div
+        class="
+            w-[20px] h-[20px] rounded-[20px] backdrop-invert
+            fixed z-[6969] pointer-events-none
+            transition-opacity duration-300 ease-in-out
+            grid place-items-center no-prose
+        "
+        id="trailer"
+    >
+        <svg
+            class="w-[10px] h-[10px] text-mono-100"
+            xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+        >
+            <path id="trailer-icon" fill="currentColor" d=""/>
+        </svg>
+    </div>
+
     <!-- Go to top button -->
     <div class="fixed bottom-4 right-4 z-10">
         <button
@@ -261,9 +326,9 @@ onMount(() => {
         <nav class="flex items-center justify-between py-8 px-12 text-lg">
             <a class="link" on:click|preventDefault={scrollToEl} href="#root">azur</a>
             <div class="flex items-center space-x-4">
-                <a class="link" on:click|preventDefault={scrollToEl} href="#discography">discography</a>
-                <a class="link" on:click|preventDefault={scrollToEl} href="#gallery">gallery</a>
-                <a class="link" on:click|preventDefault={scrollToEl} href="#about">about</a>
+                <a class="link interactable" data-type="down" on:click|preventDefault={scrollToEl} href="#discography">discography</a>
+                <a class="link interactable" data-type="down" on:click|preventDefault={scrollToEl} href="#gallery">gallery</a>
+                <a class="link interactable" data-type="down" on:click|preventDefault={scrollToEl} href="#about">about</a>
             </div>
         </nav>
     </header>
@@ -279,12 +344,13 @@ onMount(() => {
                 <a
                     class="
                         box flex-1 flex-col justify-end hover:flex-[1.25]
-                        imgbg bg-[url('/images/latest.png')] group
+                        imgbg bg-[url('/images/latest.png')] group interactable
                     "
                     href="#discography"
                     on:click|preventDefault={scrollToEl}
                     data-width="1280"
                     data-height="720"
+                    data-type="down"
                 >
                     <div class="p-8 bg-shadow">
                         <p class="text-xl font-medium">Discography</p>
@@ -294,12 +360,13 @@ onMount(() => {
                 <a
                     class="
                         box flex-1 flex-col justify-end hover:flex-[1.25]
-                        imgbg bg-[url('/images/wide2.jpg')] group
+                        imgbg bg-[url('/images/wide2.jpg')] group interactable
                     "
                     href="#gallery"
                     on:click|preventDefault={scrollToEl}
                     data-width="4096"
                     data-height="1714"
+                    data-type="down"
                 >
                     <div class="p-8 bg-shadow">
                         <p class="text-xl font-medium">Gallery</p>
@@ -311,12 +378,13 @@ onMount(() => {
             <a
                 class="
                     box flex-1 flex-col justify-end hover:flex-[1.25]
-                    imgbg bg-[url('/images/wide.jpg')] group
+                    imgbg bg-[url('/images/wide.jpg')] group interactable
                 "
                 href="#about"
                 on:click|preventDefault={scrollToEl}
                 data-width="2560"
                 data-height="1080"
+                data-type="down"
             >
                 <div class="p-8 bg-shadow">
                     <p class="text-xl font-medium">About</p>
@@ -351,10 +419,62 @@ onMount(() => {
             <p>todo</p>
         </div>
 
-        <div class="mb-[500px]" id="about">
+        <div class="mb-32" id="about">
             <h1>About</h1>
             <p>hi i make music</p>
+
+            <div class="flex flex-row space-x-8 not-prose">
+                <div class="flex flex-col">
+                    <p class="text-mono-500">Listen</p>
+                    <a
+                        href="https://www.youtube.com/@azur1s"
+                        target="_blank"
+                        rel="noopener"
+                        class="link"
+                    >Youtube</a>
+                    <a
+                        href="https://open.spotify.com/artist/1LtCIFOZ7dh57qLWCFGtUm"
+                        target="_blank"
+                        rel="noopener"
+                        class="link"
+                    >Spotify</a>
+                    <a
+                        href="https://soundcloud.com/azur1s"
+                        target="_blank"
+                        rel="noopener"
+                        class="link"
+                    >Soundcloud</a>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-mono-500">Social</p>
+                    <a
+                        href="https://instagram.com/azur1s"
+                        target="_blank"
+                        rel="noopener"
+                        class="link"
+                    >Instagram</a>
+                    <a
+                        href="https://discord.gg/N3VukUWJBk"
+                        target="_blank"
+                        rel="noopener"
+                        class="link"
+                    >Discord</a>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-mono-500">Support</p>
+                    <a
+                        href="https://ko-fi.com/azur1s"
+                        target="_blank"
+                        rel="noopener"
+                        class="link"
+                    >Ko-Fi</a>
+                </div>
+            </div>
         </div>
+
+        <p class="text-base text-mono-500">
+            © 2024 Azur1s. All rights reserved.
+        </p>
     </div>
 </main>
 

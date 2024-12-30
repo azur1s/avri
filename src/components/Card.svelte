@@ -45,7 +45,9 @@ const genreColor = (genre: string) => {
         border-mono-300 border-[1px] rounded-2xl
         hover:border-mono-500 hover:bg-mono-200
         transition-colors duration-200 ease-in-out
+        interactable
     "
+    data-type="external"
     href={link}
     target="_blank"
     rel="noopener noreferrer"
