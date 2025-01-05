@@ -479,10 +479,17 @@ onMount(() => {
 </main>
 
 <style lang="postcss">
+@font-face {
+    font-family: "Geistaaa";
+    src: url("/fonts/Geist-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
 :global(html) {
     background-color: theme(colors.mono.100);
     color: theme(colors.mono.900);
-    font-family: "Geist", sans-serif;
+    font-family: "Geistaaa", sans-serif;
 }
 
 .h-screen-no-header {
