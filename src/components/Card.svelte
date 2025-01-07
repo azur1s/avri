@@ -35,6 +35,8 @@ const genreColor = (genre: string) => {
         case "Drum and Bass": return "#ed994a";
         case "Uptempo":       return "#fa4d59";
         case "Riddim":        return "#8c53fc";
+        case "Amapiano":      return "#f5a3f5";
+        case "Jerk":          return "#6e64f5";
     }
 }
 </script>

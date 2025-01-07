@@ -16,6 +16,15 @@ type Release = {
 
 const discography: Release[] = [
     {
+        title: "hi",
+        artists: ["Azur1s"],
+        type: "Album",
+        genres: ["UKG", "House", "Rawstyle", "Tearout", "Amapiano", "Jerk"],
+        date: "2025-01-07",
+        cover: "/images/discography/hi.png",
+        link: "https://www.youtube.com/watch?v=vMbKmhW5YVQ",
+    },
+    {
         title: "FE!N (Azur1s Remix)",
         artists: ["Travis Scott"],
         type: "Remix",
@@ -473,7 +482,7 @@ onMount(() => {
         </div>
 
         <p class="text-base text-mono-500">
-            © 2024 Azur1s. All rights reserved.
+            © 2025 Azur1s. All rights reserved.
         </p>
     </div>
 </main>
