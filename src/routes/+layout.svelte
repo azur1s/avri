@@ -470,6 +470,15 @@ onMount(() => {
                     >Discord</a>
                 </div>
                 <div class="flex flex-col">
+                    <p class="text-mono-500">Programming</p>
+                    <a
+                        href="https://github.com/azur1s"
+                        target="_blank"
+                        rel="noopener"
+                        class="link"
+                    >Github</a>
+                </div>
+                <div class="flex flex-col">
                     <p class="text-mono-500">Support</p>
                     <a
                         href="https://ko-fi.com/azur1s"
