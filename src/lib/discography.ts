@@ -1,8 +1,3 @@
-<script lang="ts">
-import "../../app.css";
-import Logo from "../../components/Logo.svelte";
-import D from "../../components/d.svelte";
-
 type Release = {
     title: string;
     type: "Album" | "EP" | "Single" | "Remix";
@@ -11,9 +6,14 @@ type Release = {
     date: string;
     cover: string;
     link: string;
+    counts?: number;
 }
 
-const discography: Release[] = [
+/**
+ * Probably doesn't have to do some fancy fetching from YouTube or SoundCloud
+ * or whatever because I probably won't be releasing music that often lmao
+ */
+export const discography: Release[] = [
     {
         title: "hi",
         artists: ["Azur1s"],
@@ -22,6 +22,7 @@ const discography: Release[] = [
         date: "2025-01-07",
         cover: "/images/discography/hi.png",
         link: "https://www.youtube.com/watch?v=vMbKmhW5YVQ",
+        counts: 9,
     },
     {
         title: "FE!N (Azur1s Remix)",
@@ -103,6 +104,7 @@ const discography: Release[] = [
         date: "2024-06-10",
         cover: "/images/discography/granduer wander.jpg",
         link: "https://www.youtube.com/watch?v=kpsYZ-Zga4w",
+        counts: 5,
     },
     {
         title: "Never Knew You",
@@ -212,47 +214,114 @@ const discography: Release[] = [
         cover: "/images/discography/ygsg.jpg",
         link: "https://www.youtube.com/watch?v=Y8Swmq13Rgo",
     },
+
+    {
+        title: "Without You Beside Me",
+        artists: ["Azur1s", "Slainix"],
+        type: "Single",
+        genres: ["Dubstep"],
+        date: "2023-12-02",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=3BFVXfL0zZs",
+    },
+    {
+        title: "Take Me Higher",
+        artists: ["Azur1s", "UTAGE"],
+        type: "Single",
+        genres: ["Drum and Bass"],
+        date: "2023-10-28",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=y3I2luhM-9A",
+    },
+    {
+        title: "Caera",
+        artists: ["Azur1s"],
+        type: "Single",
+        genres: ["Drum and Bass"],
+        date: "2023-10-1",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=pqr7KP9pjQ0",
+    },
+    {
+        title: "High",
+        artists: ["Azur1s"],
+        type: "Single",
+        genres: ["Slap House"],
+        date: "2023-9-21",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=C6s-EzI_Vng",
+    },
+    {
+        title: "Expansion",
+        artists: ["Azur1s"],
+        type: "Album",
+        genres: ["Jersey", "Baile Funk", "Midtempo", "Hardstyle", "Drum and Bass", "Dubstep"],
+        date: "2023-10-28",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=8IOHpk-JFOc",
+        counts: 6,
+    },
+    {
+        title: "Tonal3",
+        artists: ["Azur1s"],
+        type: "Single",
+        genres: ["Electro House"],
+        date: "2023-7-23",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=V2xS3PMYOcU",
+    },
+    {
+        title: "Tears Out",
+        artists: ["Azur1s"],
+        type: "Single",
+        genres: ["Tearout"],
+        date: "2023-5-27",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=pwLFrBN3O30",
+    },
+    {
+        title: "One More Night",
+        artists: ["Azur1s"],
+        type: "Single",
+        genres: ["Color House"],
+        date: "2023-5-22",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=l3COOdRM9TM",
+    },
+    {
+        title: "The Remains",
+        artists: ["Azur1s"],
+        type: "Single",
+        genres: ["Color Bass"],
+        date: "2023-5-20",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=-6embqfaXu8",
+    },
+    {
+        title: "Hydrangea",
+        artists: ["Azur1s"],
+        type: "Single",
+        genres: ["Color House"],
+        date: "2023-4-9",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=32VOamhHM5I",
+    },
+    {
+        title: "Skida",
+        artists: ["Azur1s"],
+        type: "Single",
+        genres: ["Midtempo"],
+        date: "2023-4-9",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=DmmXAsxbLzQ",
+    },
+    {
+        title: "Sky Light",
+        artists: ["Azur1s"],
+        type: "Single",
+        genres: ["Color House"],
+        date: "2023-4-9",
+        cover: "/images/discography/ygsg.jpg",
+        link: "https://www.youtube.com/watch?v=RWxu5q6t408",
+    },
 ];
-</script>
-
-<div class="flex flex-col flex-grow items-center justify-center h-full gap-4">
-    <div class="text-mono-900 max-sm:w-[45%] w-[18rem] h-auto">
-        <Logo />
-    </div>
-    <div class="flex flex-row items-center gap-4">
-        <a
-            class="linke linkesel"
-            href="/"
-        >back</a>
-        <a
-            class="linke"
-            href="/gallery"
-        >gallery</a>
-        <a
-            class="linke"
-            href="/contact"
-        >contact</a>
-        <a
-            class="linke"
-            href="/about"
-        >about</a>
-        <D />
-    </div>
-
-    <div class="text-mono-900">
-        wip
-    </div>
-</div>
-
-<style lang="postcss">
-.linke {
-    @apply
-        text-mono-900 hover:text-pink-400
-        focus:text-pink-400 focus:outline-none
-        transition-colors duration-200
-}
-
-.linkesel {
-    @apply text-pink-800 hover:text-pink-500
-}
-</style>
